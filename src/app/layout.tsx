@@ -1,16 +1,10 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 
-import { Header } from "@app/global/components/base/header";
 import { AppContainer } from "@app/global/components/containers/app-container";
-import { LocalizationProvider } from "@app/global/components/providers/localization-provider";
 import { theme } from "@app/global/theme";
 import { BACK_TO_TOP_ANCHOR } from "@app/global/utils/constants/layout";
-import { i18nConfig } from "@app/i18n";
-
-const i18nNamespaces = ["main"];
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,16 +13,9 @@ export const metadata: Metadata = {
 
 type RootLayoutProps = Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }>;
 
-export default async function RootLayout({ children, params }: RootLayoutProps) {
-  const { locale } = await params;
-
-  if (!i18nConfig.locales.includes(locale)) {
-    notFound();
-  }
-
+export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body id={BACK_TO_TOP_ANCHOR}>
@@ -36,10 +23,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
           <ThemeProvider theme={theme}>
             <CssBaseline />
 
-            <LocalizationProvider namespaces={i18nNamespaces} locale={locale}>
-              <Header />
-              <AppContainer component="main">{children}</AppContainer>
-            </LocalizationProvider>
+            <AppContainer component="main">{children}</AppContainer>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>

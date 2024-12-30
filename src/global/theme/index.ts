@@ -3,8 +3,6 @@
 import { createTheme } from "@mui/material";
 import { Amatic_SC as Amatic } from "next/font/google";
 
-import { components } from "./components";
-
 declare module "@mui/material/styles" {
   interface Theme {
     customSizes: {
@@ -42,7 +40,6 @@ const baseTheme = createTheme({
 });
 
 export const theme = createTheme(baseTheme, {
-  components,
   palette: {
     primary: {
       main: "#B0C4DE",

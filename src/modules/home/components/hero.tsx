@@ -1,14 +1,11 @@
 import { Box, Stack } from "@mui/material";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 
 import { AppTypography } from "@app/global/components/ui/app-typography";
 
 import hero from "../../../../public/images/hero.jpg";
 
 export const Hero = () => {
-  const { t } = useTranslation(["main"]);
-
   return (
     <Stack
       spacing={2}
@@ -24,11 +21,11 @@ export const Hero = () => {
     >
       <Stack spacing={2} sx={{ width: { xs: "100%", md: "50%" } }}>
         <AppTypography variant="h2" sx={{ textAlign: "center" }} squiggly>
-          {t("hero.title")}
+          hero.title
         </AppTypography>
 
         <AppTypography variant="body2" sx={{ textAlign: "center" }}>
-          {t("hero.subtitle")}
+          hero.subtitle
         </AppTypography>
       </Stack>
 
