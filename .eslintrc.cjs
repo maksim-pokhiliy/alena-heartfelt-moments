@@ -124,11 +124,6 @@ module.exports = {
           {
             paths: [
               {
-                name: "@remix-run/react",
-                importNames: ["useNavigate"],
-                message: "Please use useI18nNavigate() instead",
-              },
-              {
                 name: "@mui/material",
                 importNames: ["Grid", "Hidden"],
                 message: "Shouldn't use deprecated components",

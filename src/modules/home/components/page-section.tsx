@@ -20,10 +20,12 @@ export const PageSection = ({ title, subtitle, image, reverse = false }: PageSec
         minHeight: "100vh",
         gap: { xs: 4, md: 8 },
         py: { xs: 8, md: 16 },
+        position: "relative",
+        zIndex: 1,
       }}
     >
       <Stack spacing={2} sx={{ width: { xs: "100%", md: "50%" } }}>
-        <AppTypography variant="h2" sx={{ textAlign: reverse ? "left" : "right" }} squiggly>
+        <AppTypography variant="h2" sx={{ textAlign: reverse ? "left" : "right" }}>
           {title}
         </AppTypography>
 
@@ -36,7 +38,7 @@ export const PageSection = ({ title, subtitle, image, reverse = false }: PageSec
         sx={{
           position: "relative",
           width: { xs: "100%", md: "50%" },
-          height: { xs: "500px", md: "540px" },
+          height: { xs: "500px", md: "600px", lg: "700px" },
           borderRadius: (theme) => theme.typography.pxToRem(8),
           overflow: "hidden",
         }}
