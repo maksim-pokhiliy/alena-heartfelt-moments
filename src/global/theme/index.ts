@@ -1,7 +1,7 @@
 "use client";
 
 import { createTheme } from "@mui/material";
-import { Amatic_SC as Amatic } from "next/font/google";
+import { Great_Vibes as GreatVibes } from "next/font/google";
 
 declare module "@mui/material/styles" {
   interface Theme {
@@ -21,16 +21,16 @@ declare module "@mui/material/styles" {
   }
 }
 
-const amatic = Amatic({
+const greatVibes = GreatVibes({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"],
   style: "normal",
   display: "swap",
 });
 
 const baseTheme = createTheme({
   typography: {
-    fontFamily: amatic.style.fontFamily,
+    fontFamily: greatVibes.style.fontFamily,
   },
   customSizes: {
     height: {
@@ -64,29 +64,29 @@ export const theme = createTheme(baseTheme, {
       active: "#2F4F4F",
     },
     text: {
-      primary: "#FF0088",
+      primary: "#1A1A1A",
       secondary: "#FFFFFF",
     },
     background: {
-      default: "#0F1115",
-      paper: "#FFFFFF",
+      default: "#DDDDDD",
+      paper: "#D02426",
     },
     divider: "#FF0088",
   },
   typography: {
     h1: {
-      fontSize: baseTheme.typography.pxToRem(120),
+      fontSize: baseTheme.typography.pxToRem(90),
       lineHeight: baseTheme.typography.pxToRem(130),
       "@media (min-width: 376px) and (max-width: 1024px)": {
-        fontSize: baseTheme.typography.pxToRem(100),
+        fontSize: baseTheme.typography.pxToRem(80),
         lineHeight: baseTheme.typography.pxToRem(110),
       },
     },
     h2: {
-      fontSize: baseTheme.typography.pxToRem(100),
+      fontSize: baseTheme.typography.pxToRem(80),
       lineHeight: baseTheme.typography.pxToRem(110),
       "@media (min-width: 376px) and (max-width: 1024px)": {
-        fontSize: baseTheme.typography.pxToRem(80),
+        fontSize: baseTheme.typography.pxToRem(70),
         lineHeight: baseTheme.typography.pxToRem(90),
       },
     },
