@@ -1,34 +1,34 @@
 import { Box, Stack } from "@mui/material";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
 
 import { AppTypography } from "@app/global/components/ui/app-typography";
 
-import hero from "../../../../public/images/hero.jpg";
+interface PageSectionProps {
+  title: string;
+  subtitle: string;
+  image: string;
+  reverse?: boolean;
+}
 
-export const Hero = () => {
-  const { t } = useTranslation(["main"]);
-
+export const PageSection = ({ title, subtitle, image, reverse = false }: PageSectionProps) => {
   return (
     <Stack
       spacing={2}
-      direction={{ xs: "column", md: "row" }}
+      direction={{ xs: "column", md: reverse ? "row-reverse" : "row" }}
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
-        gap: 2,
+        minHeight: "100vh",
+        gap: { xs: 4, md: 8 },
+        py: { xs: 8, md: 16 },
       }}
     >
       <Stack spacing={2} sx={{ width: { xs: "100%", md: "50%" } }}>
-        <AppTypography variant="h2" sx={{ textAlign: "center" }} squiggly>
-          {t("hero.title")}
+        <AppTypography variant="h2" sx={{ textAlign: reverse ? "left" : "right" }} squiggly>
+          {title}
         </AppTypography>
 
-        <AppTypography variant="body2" sx={{ textAlign: "center" }}>
-          {t("hero.subtitle")}
+        <AppTypography variant="body2" sx={{ textAlign: reverse ? "left" : "right" }}>
+          {subtitle}
         </AppTypography>
       </Stack>
 
@@ -36,13 +36,13 @@ export const Hero = () => {
         sx={{
           position: "relative",
           width: { xs: "100%", md: "50%" },
-          height: { xs: "200px", md: "500px" },
+          height: { xs: "500px", md: "540px" },
           borderRadius: (theme) => theme.typography.pxToRem(8),
           overflow: "hidden",
         }}
       >
         <Image
-          src={hero}
+          src={image}
           alt="Picture of the author"
           sizes="300px"
           priority

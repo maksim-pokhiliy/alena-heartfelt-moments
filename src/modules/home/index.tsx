@@ -1,28 +1,42 @@
 "use client";
 
-import { useTranslation } from "react-i18next";
-
 import { Greeting } from "./components/greeting";
-import { Hero } from "./components/hero";
-import { PageSection } from "./components/page-section/page-section";
-import { catsImages } from "./utils/cats-images";
-import { cozinessImages } from "./utils/coziness-images";
+import { PageSection } from "./components/page-section";
+import { content } from "./utils/content";
 
 export const HomePage = () => {
-  const { t } = useTranslation(["main"]);
-
   return (
     <>
-      <Hero />
-      <PageSection title={t("music.title")} subtitle={t("music.subtitle")} center />
-      <PageSection title={t("cats.title")} subtitle={t("cats.subtitle")} images={catsImages} />
-      <PageSection title={t("reading.title")} subtitle={t("reading.subtitle")} center />
-      <PageSection title={t("psychology.title")} subtitle={t("psychology.subtitle")} center />
+      <PageSection
+        title={content.hero.title}
+        subtitle={content.hero.subtitle}
+        image={content.hero.image}
+      />
 
       <PageSection
-        title={t("coziness.title")}
-        subtitle={t("coziness.subtitle")}
-        images={cozinessImages}
+        title={content.cake.title}
+        subtitle={content.cake.subtitle}
+        image={content.cake.image}
+        reverse
+      />
+
+      <PageSection
+        title={content.mother.title}
+        subtitle={content.mother.subtitle}
+        image={content.mother.image}
+      />
+
+      <PageSection
+        title={content.model.title}
+        subtitle={content.model.subtitle}
+        image={content.model.image}
+        reverse
+      />
+
+      <PageSection
+        title={content.wisdom.title}
+        subtitle={content.wisdom.subtitle}
+        image={content.wisdom.image}
       />
 
       <Greeting />

@@ -1,11 +1,10 @@
 import { Box } from "@mui/material";
-import { useTranslation } from "react-i18next";
 
 import { AppTypography } from "@app/global/components/ui/app-typography";
 
-export const Greeting = () => {
-  const { t } = useTranslation(["main"]);
+import { content } from "../utils/content";
 
+export const Greeting = () => {
   return (
     <Box
       sx={{
@@ -14,19 +13,20 @@ export const Greeting = () => {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "100vh",
-        gap: 2,
         position: "relative",
+        gap: { xs: 2, md: 4 },
+        py: { xs: 8, md: 16 },
       }}
     >
       <AppTypography variant="h1" sx={{ textAlign: "center" }} squiggly>
-        {t("video.title")}
+        {content.greeting.title}
       </AppTypography>
 
       <AppTypography
         variant="body2"
         sx={{ mb: 4, textAlign: "center", width: { xs: "100%", md: "60%" } }}
       >
-        {t("video.subtitle")}
+        {content.greeting.subtitle}
       </AppTypography>
 
       <video
