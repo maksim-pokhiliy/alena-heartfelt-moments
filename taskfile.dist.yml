@@ -72,6 +72,6 @@ tasks:
   clean:
     desc: Clean project dependencies & build
     cmds:
-      - rm -rf node_module
+      - rm -rf node_modules
       - rm -rf .next
       - yarn cache clean --all

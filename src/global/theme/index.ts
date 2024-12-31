@@ -75,51 +75,51 @@ export const theme = createTheme(baseTheme, {
   },
   typography: {
     h1: {
-      fontSize: baseTheme.typography.pxToRem(90),
-      lineHeight: baseTheme.typography.pxToRem(130),
+      fontSize: baseTheme.typography.pxToRem(75),
+      lineHeight: baseTheme.typography.pxToRem(95),
       "@media (min-width: 376px) and (max-width: 1024px)": {
-        fontSize: baseTheme.typography.pxToRem(80),
-        lineHeight: baseTheme.typography.pxToRem(110),
+        fontSize: baseTheme.typography.pxToRem(65),
+        lineHeight: baseTheme.typography.pxToRem(85),
       },
     },
     h2: {
-      fontSize: baseTheme.typography.pxToRem(80),
-      lineHeight: baseTheme.typography.pxToRem(110),
+      fontSize: baseTheme.typography.pxToRem(65),
+      lineHeight: baseTheme.typography.pxToRem(85),
       "@media (min-width: 376px) and (max-width: 1024px)": {
-        fontSize: baseTheme.typography.pxToRem(70),
-        lineHeight: baseTheme.typography.pxToRem(90),
-      },
-    },
-    h3: {
-      fontSize: baseTheme.typography.pxToRem(80),
-      lineHeight: baseTheme.typography.pxToRem(90),
-      "@media (min-width: 376px) and (max-width: 1024px)": {
-        fontSize: baseTheme.typography.pxToRem(65),
+        fontSize: baseTheme.typography.pxToRem(55),
         lineHeight: baseTheme.typography.pxToRem(75),
       },
     },
-    h4: {
-      fontSize: baseTheme.typography.pxToRem(65),
-      lineHeight: baseTheme.typography.pxToRem(75),
+    h3: {
+      fontSize: baseTheme.typography.pxToRem(60),
+      lineHeight: baseTheme.typography.pxToRem(80),
       "@media (min-width: 376px) and (max-width: 1024px)": {
         fontSize: baseTheme.typography.pxToRem(50),
+        lineHeight: baseTheme.typography.pxToRem(70),
+      },
+    },
+    h4: {
+      fontSize: baseTheme.typography.pxToRem(55),
+      lineHeight: baseTheme.typography.pxToRem(70),
+      "@media (min-width: 376px) and (max-width: 1024px)": {
+        fontSize: baseTheme.typography.pxToRem(45),
         lineHeight: baseTheme.typography.pxToRem(60),
       },
     },
     h5: {
-      fontSize: baseTheme.typography.pxToRem(50),
-      lineHeight: baseTheme.typography.pxToRem(60),
+      fontSize: baseTheme.typography.pxToRem(45),
+      lineHeight: baseTheme.typography.pxToRem(55),
       "@media (min-width: 376px) and (max-width: 1024px)": {
-        fontSize: baseTheme.typography.pxToRem(40),
-        lineHeight: baseTheme.typography.pxToRem(50),
+        fontSize: baseTheme.typography.pxToRem(35),
+        lineHeight: baseTheme.typography.pxToRem(45),
       },
     },
     h6: {
-      fontSize: baseTheme.typography.pxToRem(40),
-      lineHeight: baseTheme.typography.pxToRem(50),
+      fontSize: baseTheme.typography.pxToRem(35),
+      lineHeight: baseTheme.typography.pxToRem(45),
       "@media (min-width: 376px) and (max-width: 1024px)": {
-        fontSize: baseTheme.typography.pxToRem(34),
-        lineHeight: baseTheme.typography.pxToRem(48),
+        fontSize: baseTheme.typography.pxToRem(30),
+        lineHeight: baseTheme.typography.pxToRem(40),
       },
     },
     body2: {

@@ -18,7 +18,7 @@ export const Greeting = () => {
         py: { xs: 8, md: 16 },
       }}
     >
-      <AppTypography variant="h1" sx={{ textAlign: "center" }}>
+      <AppTypography variant="h2" sx={{ textAlign: "center" }}>
         {content.greeting.title}
       </AppTypography>
 
